@@ -3,6 +3,7 @@ body{
     width: 100vw;
     align-items: center;
     justify-content: center;
+    margin: 0 auto;
 }
 /* font */
 .work-sans-font {
@@ -93,3 +94,19 @@ main{
     width: 180px;
 }
 /* footer */
+
+
+/* media Query */
+@media screen and (max-width:576px){
+    .menu,.navbar{
+        flex-direction: column;
+    }
+    .features{
+        flex-direction: column;
+    }
+}
+@media screen and (min-width:577px) and (max-width:992px){
+    body{
+        width: 100%;
+    }
+}
