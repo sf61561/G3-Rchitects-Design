@@ -1,6 +1,5 @@
 body{
     flex-direction: column;
-    width: 100vw;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
@@ -18,14 +17,31 @@ body{
 .dark-2{
     background-color: rgb(255, 144, 14);
 }
+.dark-3{
+    color: #727272;
+}
+.dark-4{
+    color: rgb(255, 144, 14);
+}
+.dark-5{
+    color:#131313;
+}
+.gray{
+    filter: grayscale(100%);
+}
 /* display->flex */
 .flex {
     display: flex;
 }
-
+/* border */
+.border-1{
+    border:1px solid #FF900E;
+    padding: 45px 36px;
+    border-radius: 8px;
+}
 /* header */
 .navbar{
-    max-width: 100%;
+    max-width: 100vw;
     justify-content: space-between;
     align-items: center;
 }
@@ -40,6 +56,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    padding:30px;
 }
 .heading{
     font-size: 4rem;
@@ -60,19 +77,20 @@ body{
     margin-top: 32px;
 }
 .banner-image{
-    max-width: 1000px;
+    max-width: 1200px;
     margin-top: 50px;
     width: 100%;
     margin-bottom: 45px;
 }
 /* main */
 main{
-    max-width: 1440px;
-    margin: 0 auto;
+    margin:0 auto;
+    width: 100%;
 }
 .features{
     align-items: center;
     justify-content: center;
+    padding: 30px;
 }
 .team-photo{
     display: grid;
@@ -85,16 +103,147 @@ main{
     width:100%;
 }
 .our-features{
-    flex-direction: column;
-    width:100%;
     max-width: 530px;
     margin-left: 20px;
+    width:100%;
 }
 .btn-2{
     width: 180px;
 }
+.features-heading{
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.features-content{
+    font-weight: 400;
+    font-size: 1rem;
+    margin-top: 0px;
+}
+.our-features{
+    flex-direction: column;
+    max-width: 537px;
+    width: 100%;
+}
+.features-1{
+    justify-content: center;
+    margin-top: 169px;
+    padding: 30px;
+}
+.part-1{
+    flex-direction: column;
+    max-width: 586px;
+    width: 100%;
+    margin: 0 auto;
+}
+.features-heading-1{
+    font-size: 2.8rem;
+    font-weight: 700;
+    padding-left: 21px;
+    border-left: 4px solid #FF900E;
+}
+.features-descrption-1{
+    margin-top: 30px;
+    font-size: 1rem;
+    font-family: 400;
+}
+.features-type-1{
+    padding:30px;
+    margin-top: 30px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.06);
+}
+.heading-1{
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+.description-1{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 10px;
+}
+.part-2>img{
+    width:100%;
+}
+.facts{
+    flex-direction: column;
+    max-width: 1200px;
+    width: 100%;
+    margin: 0 auto;
+    align-items: center;
+    padding: 30px;
+}
+.facts-heading{
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-top: 130px;
+}
+.facts-content-1{
+    max-width: 542px;
+    font-size: 1rem;
+    font-family: 400;
+    margin-top: 24px;
+    margin-bottom: 100px;
+}
+.facts-content-2{
+    display: grid;
+    max-width: 1440px;
+    grid-template-columns: repeat(4,1fr);
+    align-items: center;
+    margin: 0 auto;
+    gap: 3rem;
+}
+.fact-1,.fact-2,.fact-3,.fact-4{
+    text-align: center;
+}
+.content-1{
+    margin-top: 10px;
+    font-size: 2.8rem;
+    font-weight: 600;
+    color: #424242;
+}
+.content-2{
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #727272;
+}
+.sponsors{
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+    padding: 30px;
+}
+.sponsors-heading{
+    margin-top: 180px;
+    font-size: 2.8rem;
+    font-weight: 700;
+}
+.spnosors-description{
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 24px;
+}
+.sponsors-img{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    margin-top: 50px;
+    gap: 3rem;
+    align-items: center;
+    justify-content: center;
+}
 /* footer */
-
+footer{
+    margin-top: 130px;
+    max-width: 1440px;
+    width: 100%;
+    padding-top: 39px;
+    padding-bottom: 39px;
+    color: #FFF4E7;
+}
+.copyright{
+    font-size: 1.25rem;
+    font-weight: 400;
+    color:#424242;
+    text-align:center;
+}
 
 /* media Query */
 @media screen and (max-width:576px){
@@ -102,11 +251,31 @@ main{
         flex-direction: column;
     }
     .features{
+        flex-direction: column
+    }
+    .facts-content-2{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .sponsors-img{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .features-1{
         flex-direction: column;
+        margin: 0 auto;
     }
 }
 @media screen and (min-width:577px) and (max-width:992px){
     body{
         width: 100%;
+    }
+    .facts-content-2{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .sponsors-img{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .features-1{
+        flex-direction: column;
+        margin: 0 auto;
     }
 }
